@@ -89,7 +89,7 @@ El dominio: un organizador de torneos gestiona **equipos** participantes y regis
 | Documentación API | springdoc-openapi | Genera documentación OpenAPI/Swagger UI a partir del código, estándar de facto en APIs REST profesionales |
 | Build | Maven | Estándar, buena integración con el resto del stack |
 
-**Nota para el docente:** este stack requiere que los estudiantes tengan Docker instalado (para Testcontainers y, opcionalmente, para levantar PostgreSQL en desarrollo local). Es un buen punto para introducir `docker-compose` como parte del entorno de desarrollo.
+**Nota:** este stack requiere  Docker instalado (para Testcontainers y, opcionalmente, para levantar PostgreSQL en desarrollo local). 
 
 ## 5. Estructura de proyecto
 
