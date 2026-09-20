@@ -1,5 +1,6 @@
 package com.curso.arenaranking.team;
 
+import com.curso.arenaranking.match.Match;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +10,8 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "teams")
@@ -40,6 +43,10 @@ public class Team {
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
+
+    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private List<Match> matches = new ArrayList<>();
 
     @PrePersist
     void onCreate() {
